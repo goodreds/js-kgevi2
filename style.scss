@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:300&display=swap");
+
+// $color-background: rgba(32, 130, 97, 1); // dark green
+// $color-foreground: RGBA(101, 181, 161, 1); // light green
+// $color-mid: RGBA(120, 186, 166, 1); // mid green
+// $color-white: RGBA(223, 248, 240, 1); // polar bear white
+
+$color-background: #2A7CC3; // denim
+$color-foreground: #1592E5; // rich electric blue
+$color-mid: #00A6E7; // cerulean
+$color-white: RGBA(223, 248, 240, 1); // polar bear white
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #444;
+  font-family: "Open Sans", sans-serif;
+  padding: 50px;
+  // background-color: $color-background;
+  background: linear-gradient(
+    to bottom right,
+    $color-background,
+    $color-foreground
+  );
+  height: 100vh;
+  display: flex;
+  align-items: center; // CROSS AXIS
+  justify-content: center; // MAIN AXIS
+}
+
+.article {
+  max-width: 400px;
+  // border-radius: 4px;
+  overflow: hidden;
+  // box-shadow: 0 30px 80px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  // Neumorphism
+  border-radius: 13px;
+  background: $color-background;
+  box-shadow: 28px 28px 56px #2469a6, -28px -28px 56px #308fe0;
+
+  &__hero {
+    flex: 0 0 45%;
+    border-bottom: 10px solid $color-mid;
+    background-color: $color-mid;
+  }
+  &__img {
+    width: 100%;
+    display: block;
+    mix-blend-mode: luminosity;
+  }
+
+  &__content {
+    flex: 1;
+    background: white;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__price {
+    flex: 0 0 50px;
+    background: linear-gradient(
+      to bottom left,
+      $color-background,
+      $color-foreground
+    );
+    writing-mode: horizontal-rl;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__heading {
+    font-size: 1.25rem;
+    margin-right: auto;
+  }
+
+  &__tag {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: white;
+    padding: 2px 7px;
+    border-radius: 100px;
+    margin-left: 7px;
+    letter-spacing: 0.1rem;
+  }
+
+  &__tag--1 {
+    background-color: $color-background;
+  }
+  &__tag--2 {
+    background-color: $color-foreground;
+  }
+
+  &__description {
+    font-size: 14px;
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  &__details {
+    display: flex;
+    margin-top: 1rem;
+    align-self: center;
+  }
+
+  &__detail {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+  }
+}
+
+.emoji {
+  font-size: 20px;
+  margin-right: 5px;
+  margin-top: 2px;
+}
